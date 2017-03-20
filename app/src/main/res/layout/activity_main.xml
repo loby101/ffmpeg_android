@@ -13,6 +13,12 @@
         android:layout_height="wrap_content"
         android:text="Configuration" />
 
+    <Button
+        android:id="@+id/btn_watermarking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watermarking"/>
+
     <TextView
         android:id="@+id/tv_message"
         android:layout_width="match_parent"

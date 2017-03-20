@@ -20,6 +20,11 @@ public class FFmpegMedia {
     /**
      * 获取FFmpeg的配置信息
      */
-    public static native String GetFFmpegConfiguration();
+    public static native String getFFmpegConfiguration();
+
+    /**
+     * Filter   添加水印
+     */
+    public static native void watermarking(String videoPath,String pngPath);
 
 }
