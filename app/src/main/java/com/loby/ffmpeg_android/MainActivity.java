@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
         watermarking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FFmpegMedia.watermarking("","");
+                FFmpegMedia.watermarking("","","");
             }
         });
     }

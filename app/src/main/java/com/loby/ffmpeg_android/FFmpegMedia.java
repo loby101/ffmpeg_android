@@ -25,6 +25,6 @@ public class FFmpegMedia {
     /**
      * Filter   添加水印
      */
-    public static native void watermarking(String videoPath,String pngPath);
+    public static native void watermarking(String videoPath,String pngPath,String outPath);
 
 }
