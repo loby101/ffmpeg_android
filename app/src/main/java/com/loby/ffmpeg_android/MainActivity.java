@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
     private Button configuration;
-    private Button watermarking;
+    private Button format;
     private TextView message;
 
     @Override
@@ -25,15 +25,15 @@ public class MainActivity extends Activity {
         configuration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String config = FFmpegMedia.getFFmpegConfiguration();
+                String config = FFmpegMedia.configurationinfo();
                 message.setText(config);
             }
         });
-        watermarking = (Button) findViewById(R.id.btn_watermarking);
-        watermarking.setOnClickListener(new View.OnClickListener() {
+        format = (Button) findViewById(R.id.btn_format);
+        format.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FFmpegMedia.watermarking("","","");
+                message.setText(FFmpegMedia.avformatinfo());
             }
         });
     }
