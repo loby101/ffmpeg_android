@@ -3,14 +3,12 @@
 //
 #include <string.h>
 #include <stdio.h>
-#include <ffmpeg.h>
 
 #include "libavcodec/avcodec.h"
 #include "libavformat/avformat.h"
 #include "libavcodec/avcodec.h"
 #include "libavutil/avutil.h"
 #include "libavfilter/avfilter.h"
-
 #ifdef ANDROID
 #include <jni.h>
 #include <android/log.h>
@@ -44,44 +42,4 @@ jstring Java_com_loby_ffmpeg_1android_FFmpegMedia_avformatinfo( JNIEnv* env, job
     }
     //LOGE("%s", info);
     return (*env)->NewStringUTF(env, info);
-}
-
-void custom_log(void *ptr, int level, const char* fmt, va_list vl)
-{
-    FILE *fp=fopen("/sdcard/rollcap/av_log.txt","a+");
-    if(fp){
-        vfprintf(fp,fmt,vl);
-        fflush(fp);
-        fclose(fp);
-    }
-}
-
-jint Java_com_loby_ffmpeg_1android_FFmpegMedia_run( JNIEnv* env, jobject thiz, jobjectArray args )
-{
-    av_log_set_callback(custom_log);
-
-    int i = 0;
-    int argc = 0;
-    char **argv = NULL;
-    jstring *strr = NULL;
-
-    if (args != NULL) {
-    	argc = (*env)->GetArrayLength(env, args);
-    	argv = (char **) malloc(sizeof(char *) * argc);
-    	strr = (jstring *) malloc(sizeof(jstring) * argc);
-
-    	for (i = 0; i < argc; ++i) {
-    		strr[i] = (jstring)(*env)->GetObjectArrayElement(env, args, i);
-    		argv[i] = (char *)(*env)->GetStringUTFChars(env, strr[i], 0);
-    	}
-    }
-    int result = run(argc, argv);
-
-    for (i = 0; i < argc; ++i) {
-    	(*env)->ReleaseStringUTFChars(env, strr[i], argv[i]);
-    }
-    free(argv);
-    free(strr);
-
-    return result == 0;
 }

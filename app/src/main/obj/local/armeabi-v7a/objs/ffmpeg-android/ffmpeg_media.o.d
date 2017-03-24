@@ -19,29 +19,6 @@
  /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/linux/types.h \
  /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/machine/kernel.h \
  /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/sysmacros.h \
- /android/project/ffmpeg_android/app/src/main/jni/ffmpeg.h \
- /android/project/ffmpeg_android/app/src/main/jni/config.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/signal.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/limits.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/limits.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/linux/limits.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/machine/internal_types.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/machine/limits.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/syslimits.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm/page.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm/signal.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm-generic/signal.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm/sigcontext.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm/siginfo.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm-generic/siginfo.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/ucontext.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/user.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/pthread.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/time.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/time.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/linux/time.h \
- /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sched.h \
- /android/project/ffmpeg_android/app/src/main/jni/cmdutils.h \
  /android/project/ffmpeg_android/app/src/main/jni/include/libavcodec/avcodec.h \
  /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/errno.h \
  /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/linux/errno.h \
@@ -52,6 +29,13 @@
  /android/project/ffmpeg_android/app/src/main/jni/include/libavutil/avutil.h \
  /android/project/ffmpeg_android/app/src/main/jni/include/libavutil/common.h \
  /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/inttypes.h \
+ /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/limits.h \
+ /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/limits.h \
+ /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/linux/limits.h \
+ /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/machine/internal_types.h \
+ /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/machine/limits.h \
+ /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/syslimits.h \
+ /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm/page.h \
  /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/math.h \
  /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/stdlib.h \
  /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/alloca.h \
@@ -85,20 +69,17 @@
  /android/project/ffmpeg_android/app/src/main/jni/include/libavcodec/version.h \
  /android/project/ffmpeg_android/app/src/main/jni/include/libavutil/version.h \
  /android/project/ffmpeg_android/app/src/main/jni/include/libavcodec/old_codec_ids.h \
- /android/project/ffmpeg_android/app/src/main/jni/include/libavfilter/avfilter.h \
- /android/project/ffmpeg_android/app/src/main/jni/include/libavfilter/version.h \
  /android/project/ffmpeg_android/app/src/main/jni/include/libavformat/avformat.h \
+ /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/time.h \
+ /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/time.h \
+ /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/linux/time.h \
+ /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm/siginfo.h \
+ /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm-generic/siginfo.h \
  /android/project/ffmpeg_android/app/src/main/jni/include/libavformat/avio.h \
  /android/project/ffmpeg_android/app/src/main/jni/include/libavutil/common.h \
  /android/project/ffmpeg_android/app/src/main/jni/include/libavformat/version.h \
- /android/project/ffmpeg_android/app/src/main/jni/include/libswscale/swscale.h \
- /android/project/ffmpeg_android/app/src/main/jni/include/libswscale/version.h \
- /android/project/ffmpeg_android/app/src/main/jni/include/libavformat/avio.h \
- /android/project/ffmpeg_android/app/src/main/jni/include/libavutil/eval.h \
- /android/project/ffmpeg_android/app/src/main/jni/include/libavutil/fifo.h \
- /android/project/ffmpeg_android/app/src/main/jni/include/libavutil/threadmessage.h \
- /android/project/ffmpeg_android/app/src/main/jni/include/libswresample/swresample.h \
- /android/project/ffmpeg_android/app/src/main/jni/include/libswresample/version.h \
+ /android/project/ffmpeg_android/app/src/main/jni/include/libavfilter/avfilter.h \
+ /android/project/ffmpeg_android/app/src/main/jni/include/libavfilter/version.h \
  /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/jni.h \
  /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/android/log.h
 
@@ -140,52 +121,6 @@
 
 /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/sysmacros.h:
 
-/android/project/ffmpeg_android/app/src/main/jni/ffmpeg.h:
-
-/android/project/ffmpeg_android/app/src/main/jni/config.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/signal.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/limits.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/limits.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/linux/limits.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/machine/internal_types.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/machine/limits.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/syslimits.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm/page.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm/signal.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm-generic/signal.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm/sigcontext.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm/siginfo.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm-generic/siginfo.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/ucontext.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/user.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/pthread.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/time.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/time.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/linux/time.h:
-
-/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sched.h:
-
-/android/project/ffmpeg_android/app/src/main/jni/cmdutils.h:
-
 /android/project/ffmpeg_android/app/src/main/jni/include/libavcodec/avcodec.h:
 
 /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/errno.h:
@@ -205,6 +140,20 @@
 /android/project/ffmpeg_android/app/src/main/jni/include/libavutil/common.h:
 
 /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/inttypes.h:
+
+/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/limits.h:
+
+/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/limits.h:
+
+/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/linux/limits.h:
+
+/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/machine/internal_types.h:
+
+/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/machine/limits.h:
+
+/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/syslimits.h:
+
+/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm/page.h:
 
 /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/math.h:
 
@@ -272,11 +221,17 @@
 
 /android/project/ffmpeg_android/app/src/main/jni/include/libavcodec/old_codec_ids.h:
 
-/android/project/ffmpeg_android/app/src/main/jni/include/libavfilter/avfilter.h:
-
-/android/project/ffmpeg_android/app/src/main/jni/include/libavfilter/version.h:
-
 /android/project/ffmpeg_android/app/src/main/jni/include/libavformat/avformat.h:
+
+/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/time.h:
+
+/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/sys/time.h:
+
+/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/linux/time.h:
+
+/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm/siginfo.h:
+
+/android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/asm-generic/siginfo.h:
 
 /android/project/ffmpeg_android/app/src/main/jni/include/libavformat/avio.h:
 
@@ -284,21 +239,9 @@
 
 /android/project/ffmpeg_android/app/src/main/jni/include/libavformat/version.h:
 
-/android/project/ffmpeg_android/app/src/main/jni/include/libswscale/swscale.h:
+/android/project/ffmpeg_android/app/src/main/jni/include/libavfilter/avfilter.h:
 
-/android/project/ffmpeg_android/app/src/main/jni/include/libswscale/version.h:
-
-/android/project/ffmpeg_android/app/src/main/jni/include/libavformat/avio.h:
-
-/android/project/ffmpeg_android/app/src/main/jni/include/libavutil/eval.h:
-
-/android/project/ffmpeg_android/app/src/main/jni/include/libavutil/fifo.h:
-
-/android/project/ffmpeg_android/app/src/main/jni/include/libavutil/threadmessage.h:
-
-/android/project/ffmpeg_android/app/src/main/jni/include/libswresample/swresample.h:
-
-/android/project/ffmpeg_android/app/src/main/jni/include/libswresample/version.h:
+/android/project/ffmpeg_android/app/src/main/jni/include/libavfilter/version.h:
 
 /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/jni.h:
 

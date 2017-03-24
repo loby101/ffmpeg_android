@@ -34,7 +34,7 @@ include $(PREBUILT_SHARED_LIBRARY)
 # Program
 include $(CLEAR_VARS)
 LOCAL_MODULE := ffmpeg-android
-LOCAL_SRC_FILES := ffmpeg_media.c ffmpeg.c ffmpeg_filter.c ffmpeg_opt.c cmdutils.c
+LOCAL_SRC_FILES := ffmpeg_media.c
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
 LOCAL_LDLIBS := -llog -lz
 LOCAL_SHARED_LIBRARIES := avcodec avdevice avfilter avformat avutil swresample swscale

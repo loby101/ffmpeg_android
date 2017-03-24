@@ -26,9 +26,4 @@ public class FFmpegMedia {
      */
     public static native String avformatinfo();
 
-    /**
-     * 命令行
-     */
-    public static native int run(String[] commands);
-
 }
