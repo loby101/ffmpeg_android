@@ -12,15 +12,8 @@
 #include "libswscale/swscale.h"
 
 
-#ifdef ANDROID
 #include <jni.h>
 #include <android/log.h>
-#define LOGE(format, ...)  __android_log_print(ANDROID_LOG_ERROR, "(>_<)", format, ##__VA_ARGS__)
-#define LOGI(format, ...)  __android_log_print(ANDROID_LOG_INFO,  "(^_^)", format, ##__VA_ARGS__)
-#else
-#define LOGE(format, ...)  printf("(>_<) " format "\n", ##__VA_ARGS__)
-#define LOGI(format, ...)  printf("(^_^) " format "\n", ##__VA_ARGS__)
-#endif
 
 //Output FFmpeg's av_log()
 void custom_log(void *ptr, int level, const char* fmt, va_list vl){
@@ -90,11 +83,11 @@ jint Java_com_loby_ffmpeg_1android_FFmpegMedia_decode( JNIEnv* env, jobject thiz
     pFormatCtx = avformat_alloc_context();
 
     if(avformat_open_input(&pFormatCtx,input_str,NULL,NULL)!=0){
-        LOGE("Couldn't open input stream.\n");
+        //LOGE("Couldn't open input stream.\n");
         return -1;
     }
     if(avformat_find_stream_info(pFormatCtx,NULL)<0){
-        LOGE("Couldn't find stream information.\n");
+        //LOGE("Couldn't find stream information.\n");
         return -1;
     }
     videoindex=-1;
@@ -104,17 +97,17 @@ jint Java_com_loby_ffmpeg_1android_FFmpegMedia_decode( JNIEnv* env, jobject thiz
             break;
         }
     if(videoindex==-1){
-        LOGE("Couldn't find a video stream.\n");
+        //LOGE("Couldn't find a video stream.\n");
         return -1;
     }
     pCodecCtx=pFormatCtx->streams[videoindex]->codec;
     pCodec=avcodec_find_decoder(pCodecCtx->codec_id);
     if(pCodec==NULL){
-        LOGE("Couldn't find Codec.\n");
+        //LOGE("Couldn't find Codec.\n");
         return -1;
     }
     if(avcodec_open2(pCodecCtx, pCodec,NULL)<0){
-        LOGE("Couldn't open codec.\n");
+        //LOGE("Couldn't open codec.\n");
         return -1;
     }
 
@@ -151,7 +144,7 @@ jint Java_com_loby_ffmpeg_1android_FFmpegMedia_decode( JNIEnv* env, jobject thiz
         if(packet->stream_index==videoindex){
             ret = avcodec_decode_video2(pCodecCtx, pFrame, &got_picture, packet);
             if(ret < 0){
-                LOGE("Decode Error.\n");
+                //LOGE("Decode Error.\n");
                 return -1;
             }
             if(got_picture){
@@ -170,7 +163,7 @@ jint Java_com_loby_ffmpeg_1android_FFmpegMedia_decode( JNIEnv* env, jobject thiz
                         case AV_PICTURE_TYPE_B:sprintf(pictype_str,"B");break;
                         default:sprintf(pictype_str,"Other");break;
                     }
-                    LOGI("Frame Index: %5d. Type:%s",frame_cnt,pictype_str);
+                    //LOGI("Frame Index: %5d. Type:%s",frame_cnt,pictype_str);
                     frame_cnt++;
                 }
             }
@@ -198,7 +191,7 @@ jint Java_com_loby_ffmpeg_1android_FFmpegMedia_decode( JNIEnv* env, jobject thiz
                 case AV_PICTURE_TYPE_B:sprintf(pictype_str,"B");break;
                 default:sprintf(pictype_str,"Other");break;
             }
-            LOGI("Frame Index: %5d. Type:%s",frame_cnt,pictype_str);
+            //LOGI("Frame Index: %5d. Type:%s",frame_cnt,pictype_str);
             frame_cnt++;
         }
         time_finish = clock();

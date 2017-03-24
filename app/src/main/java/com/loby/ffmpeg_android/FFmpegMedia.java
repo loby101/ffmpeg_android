@@ -7,12 +7,6 @@ package com.loby.ffmpeg_android;
 public class FFmpegMedia {
 
     static {
-        System.loadLibrary("avutil");
-        System.loadLibrary("swresample");
-        System.loadLibrary("avcodec");
-        System.loadLibrary("avformat");
-        System.loadLibrary("swscale");
-        System.loadLibrary("avfilter");
         System.loadLibrary("ffmpeg-android");
     }
 
