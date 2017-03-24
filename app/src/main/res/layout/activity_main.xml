@@ -22,11 +22,11 @@
         android:text="Format" />
 
     <Button
-        android:id="@+id/btn_run"
+        android:id="@+id/btn_common"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="Run"/>
+        android:text="Common"/>
 
     <ScrollView
         android:layout_width="match_parent"

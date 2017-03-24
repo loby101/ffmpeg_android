@@ -26,4 +26,8 @@ public class FFmpegMedia {
      */
     public static native String avformatinfo();
 
+    /**
+     * 解码 (封装格式 to YUV)
+     */
+    public static native int decode(String inputurl, String outputurl);
 }

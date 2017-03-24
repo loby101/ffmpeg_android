@@ -2,21 +2,13 @@ package com.loby.ffmpeg_android;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.Environment;
-import android.os.StrictMode;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class MainActivity extends Activity {
 
-    private Button configuration;
-    private Button format;
+    private Button configuration,format,common;
     private TextView message;
 
     @Override
@@ -41,6 +33,13 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 message.setText(FFmpegMedia.avformatinfo());
+            }
+        });
+        common = (Button) findViewById(R.id.btn_common);
+        common.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FFmpegMedia.decode("/sdcard/rollcap/rollcap_video/ROLLCAP_20170321101842582_4k.mp4","/sdcard/test.yuv");
             }
         });
     }

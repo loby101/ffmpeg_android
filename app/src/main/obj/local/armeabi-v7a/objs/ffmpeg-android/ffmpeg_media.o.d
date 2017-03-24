@@ -80,6 +80,8 @@
  /android/project/ffmpeg_android/app/src/main/jni/include/libavformat/version.h \
  /android/project/ffmpeg_android/app/src/main/jni/include/libavfilter/avfilter.h \
  /android/project/ffmpeg_android/app/src/main/jni/include/libavfilter/version.h \
+ /android/project/ffmpeg_android/app/src/main/jni/include/libswscale/swscale.h \
+ /android/project/ffmpeg_android/app/src/main/jni/include/libswscale/version.h \
  /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/jni.h \
  /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/android/log.h
 
@@ -242,6 +244,10 @@
 /android/project/ffmpeg_android/app/src/main/jni/include/libavfilter/avfilter.h:
 
 /android/project/ffmpeg_android/app/src/main/jni/include/libavfilter/version.h:
+
+/android/project/ffmpeg_android/app/src/main/jni/include/libswscale/swscale.h:
+
+/android/project/ffmpeg_android/app/src/main/jni/include/libswscale/version.h:
 
 /android/tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include/jni.h:
 
