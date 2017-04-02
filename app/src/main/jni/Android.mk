@@ -43,5 +43,5 @@ LOCAL_MODULE := ffmpeg-android
 LOCAL_SRC_FILES := ffmpeg_media.c
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
 LOCAL_LDLIBS := -ldl -llog -lz -lm -lc -lstdc++ -pthread -landroid
-LOCAL_WHOLE_STATIC_LIBRARIES := avcodec avdevice avfilter avformat avutil swresample swscale
+LOCAL_WHOLE_STATIC_LIBRARIES := avcodec avfilter avformat avutil swresample swscale
 include $(BUILD_SHARED_LIBRARY)

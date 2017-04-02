@@ -199,7 +199,6 @@ jint Java_com_loby_ffmpeg_1android_FFmpegMedia_decode( JNIEnv* env, jobject thiz
 
         sprintf(info, "%s[Time      ]%fms\n",info,time_duration);
         sprintf(info, "%s[Count     ]%d\n",info,frame_cnt);
-
         sws_freeContext(img_convert_ctx);
 
       fclose(fp_yuv);

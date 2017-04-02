@@ -5,11 +5,14 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.loby.ffmpeg_android"
-        minSdkVersion 10
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
     }
     buildTypes {
         release {
@@ -21,6 +24,11 @@ android {
         main {
             jniLibs.srcDirs = ['libs','src/main/libs']
             jni.srcDirs = []    //disable automatic ndk-build call
+        }
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path 'src/main/jni/Android.mk'
         }
     }
 }
