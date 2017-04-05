@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
         common.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FFmpegMedia.decode("/sdcard/rollcap/rollcap_video/ROLLCAP_20170321101842582_4k.mp4","/sdcard/test.yuv");
+                FFmpegMedia.decode("/sdcard/rollcap/rollcap_video/ROLLCAP_20170321103033545_720p.mp4","/sdcard/test0405111.yuv");
             }
         });
     }

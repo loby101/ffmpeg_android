@@ -1,4 +1,4 @@
-Executable : /android/tools/android-ndk-r10e/ndk-build
+Executable : /Users/LOBY/Library/Android/sdk/ndk-bundle/ndk-build
 arguments : 
 NDK_PROJECT_PATH=null
 APP_BUILD_SCRIPT=/android/project/ffmpeg_android/app/src/main/jni/Android.mk
