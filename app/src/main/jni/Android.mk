@@ -40,7 +40,7 @@ include $(PREBUILT_STATIC_LIBRARY)
 # Program
 include $(CLEAR_VARS)
 LOCAL_MODULE := ffmpeg-android
-LOCAL_SRC_FILES := ffmpeg_media.c ffmpeg_decode.c
+LOCAL_SRC_FILES := ffmpeg_media.c ffmpeg_decode.c ffmpeg_filter.c
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
 LOCAL_LDLIBS := -ldl -llog -lz -lm -lc -lstdc++ -pthread -landroid
 LOCAL_WHOLE_STATIC_LIBRARIES := avcodec avfilter avformat avutil swresample swscale

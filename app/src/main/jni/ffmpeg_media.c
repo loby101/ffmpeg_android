@@ -56,7 +56,23 @@ jint Java_com_loby_ffmpeg_1android_FFmpegMedia_decode(JNIEnv *env, jobject thiz,
     //FFmpeg av_log() callback
     av_log_set_callback(custom_log);
 
-    encode(input_str,output_str);
+    decode(input_str,output_str);
 
     return 0;
+}
+
+jint Java_com_loby_ffmpeg_1android_FFmpegMedia_filter(JNIEnv *env, jobject thiz, jstring input_jstr,
+                                                      jstring output_jstr) {
+    char input_str[500] = {0};
+    char output_str[500] = {0};
+
+    sprintf(input_str, "%s", (*env)->GetStringUTFChars(env, input_jstr, NULL));
+    sprintf(output_str, "%s", (*env)->GetStringUTFChars(env, output_jstr, NULL));
+
+    //FFmpeg av_log() callback
+    av_log_set_callback(custom_log);
+
+    int ret = filter(input_str,output_str);
+
+    return ret;
 }

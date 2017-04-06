@@ -8,3 +8,4 @@
 #endif //FFMPEGMEDIA_FFMPEG_CUSTOM_H
 
 void decode(char *input_str,char *output_str);
+int filter(char *input_str,char *output_str);
