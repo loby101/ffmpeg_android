@@ -11,6 +11,11 @@ public class FFmpegMedia {
     }
 
     /**
+     * 运行FFmpeg命令
+     */
+    public native static int run(String[] commands, int argc);
+
+    /**
      * 获取FFmpeg的配置信息
      */
     public static native String configurationinfo();

@@ -3,12 +3,13 @@
 //
 #include <stdio.h>
 #include <jni.h>
+#include "ffmpeg.h"
 
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
 
 
-#include "ffmpeg_custom.h"
+#include "ffmpegcustom.h"
 
 //Output FFmpeg's av_log()
 void custom_log(void *ptr, int level, const char *fmt, va_list vl) {
@@ -18,6 +19,24 @@ void custom_log(void *ptr, int level, const char *fmt, va_list vl) {
         fflush(fp);
         fclose(fp);
     }
+}
+
+jint Java_com_loby_ffmpeg_1android_FFmpegMedia_run(JNIEnv *env, jobject thiz, jobjectArray commands, jint cmdnum) {
+    int argc=cmdnum;
+    char** argv=(char**)malloc(sizeof(char*)*cmdnum);
+    int i=0;
+    for(i=0;i<cmdnum;i++)
+    {
+      jstring string=(*env)->GetObjectArrayElement(env,commands,i);
+      const char* tmp=(*env)->GetStringUTFChars(env,string,0);
+      argv[i]=(char*)malloc(sizeof(char)*1024);
+      strcpy(argv[i],tmp);
+    }
+    return run(cmdnum,argv);
+    for(i=0;i<cmdnum;i++){
+      free(argv[i]);
+    }
+    free(argv);
 }
 
 jstring Java_com_loby_ffmpeg_1android_FFmpegMedia_configurationinfo(JNIEnv *env, jobject thiz) {
