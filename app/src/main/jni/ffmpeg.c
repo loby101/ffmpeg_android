@@ -3478,7 +3478,6 @@ static void *input_thread(void *arg)
             break;
         }
     }
-
     return NULL;
 }
 

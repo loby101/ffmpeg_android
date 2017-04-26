@@ -39,6 +39,7 @@ include $(PREBUILT_STATIC_LIBRARY)
 
 # Program
 include $(CLEAR_VARS)
+LOCAL_CFLAGS := -std=c99
 LOCAL_MODULE := ffmpeg-android
 LOCAL_SRC_FILES := ffmpeg.c ffmpeg_opt.c cmdutils.c ffmpeg_filter.c ffmpegmedia.c ffmpegdecode.c ffmpegfilter.c
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
