@@ -16,6 +16,12 @@ public class FFmpegMedia {
     public native static int run(String[] commands, int argc);
 
     /**
+     * 取消FFmpeg命令行任务
+     * @return
+     */
+    public native static void cancel();
+
+    /**
      * 获取FFmpeg的配置信息
      */
     public static native String configurationinfo();

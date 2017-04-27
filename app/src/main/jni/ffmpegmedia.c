@@ -11,6 +11,8 @@
 
 #include "ffmpegcustom.h"
 
+int flag = 0;   //command flag
+
 //Output FFmpeg's av_log()
 void custom_log(void *ptr, int level, const char *fmt, va_list vl) {
     FILE *fp = fopen("/storage/emulated/0/av_log.txt", "a+");
@@ -22,6 +24,7 @@ void custom_log(void *ptr, int level, const char *fmt, va_list vl) {
 }
 
 jint Java_com_loby_ffmpeg_1android_FFmpegMedia_run(JNIEnv *env, jobject thiz, jobjectArray commands, jint cmdnum) {
+    flag = 0;
     int argc=cmdnum;
     char** argv=(char**)malloc(sizeof(char*)*cmdnum);
     int i=0;
@@ -32,11 +35,20 @@ jint Java_com_loby_ffmpeg_1android_FFmpegMedia_run(JNIEnv *env, jobject thiz, jo
       argv[i]=(char*)malloc(sizeof(char)*1024);
       strcpy(argv[i],tmp);
     }
-    return run(cmdnum,argv);
+    int result = run(cmdnum,argv);
     for(i=0;i<cmdnum;i++){
       free(argv[i]);
     }
     free(argv);
+    return result;
+}
+
+void Java_com_loby_ffmpeg_1android_FFmpegMedia_cancel(JNIEnv *env, jobject thiz) {
+    flag = 1;
+}
+
+int is_cancel(){
+    return flag;
 }
 
 jstring Java_com_loby_ffmpeg_1android_FFmpegMedia_configurationinfo(JNIEnv *env, jobject thiz) {

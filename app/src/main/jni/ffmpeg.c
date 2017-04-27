@@ -67,6 +67,7 @@
 # include "libavfilter/avfilter.h"
 # include "libavfilter/buffersrc.h"
 # include "libavfilter/buffersink.h"
+# include "ffmpegcustom.h"
 
 #if HAVE_SYS_RESOURCE_H
 #include <sys/time.h>
@@ -3344,6 +3345,8 @@ static int check_keyboard_interaction(int64_t cur_time)
 {
     int i, ret, key;
     static int64_t last_time;
+    if(is_cancel())
+        return AVERROR_EXIT;
     if (received_nb_signals)
         return AVERROR_EXIT;
     /* read_key() returns 0 on EOF */

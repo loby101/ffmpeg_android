@@ -9,3 +9,4 @@
 
 void decode(char *input_str,char *output_str);
 int filter(char *input_str,char *output_str);
+int is_cancel();
